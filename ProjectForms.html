@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        body {
+            direction: rtl;
+            text-align: justify;
+        }
+    </style> -->
+</head>
+
+<body>
+    <form action="/submit">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <input id="fullName" label="fullName" type="text" required minlength="2">
+            <label for="fullName">fullName</label>
+            <input id="email" label="email" type="email" required>
+            <label for="email">email</label>
+            <input id="phone" label="phone" type="tel" pattern="05[0-9]{8}" required>
+            <label for="phone">phone</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Ticket & Workshops</legend>
+            <h4>Ticket type</h4>
+            <select name="ticket" id="ticket">
+                <option value="VIP">VIP</option>
+                <option value="standard">Standard</option>
+                <option value="Student">Student</option>
+            </select>
+            <br>
+            <h4>Workshops</h4>
+            <input type="checkbox" name="per" id="per">
+            <label for="per">Web Performance</label>
+
+            <input type="checkbox" name="Access" id="Access">
+            <label for="Access">Accessibility</label>
+
+            <input type="checkbox" name="test" id="test">
+            <label for="test">Testing</label>
+
+            <br>
+            <h4>Diet</h4>
+            <input type="radio" id="None" name="None" value="None">
+            <label for="None">None</label><br>
+
+            <input type="radio" id="Vegan" name="Vegan" value="Vegan">
+            <label for="Vegan">Vegan</label><br>
+
+            <input type="radio" id="Kosher" name="Kosher" value="Kosher">
+            <label for="Kosher">Kosher</label><br>
+
+            <input type="radio" id="Halal" name="Halal" value="Halal">
+            <label for="Halal">Halal</label><br>
+
+            <input type="radio" id="Other" name="Other" value="Other">
+            <label for="Other">Other</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Payment Details</legend>
+            <input type="text" id="card" minlength="13" maxlength="19" pattern="[0-9 ]+">
+            <label for="card">credit card</label>
+            <input type="month" id="validity" min="10-2026">
+            <label for="validity">validity</label>
+            <input type="password" id="cvv" minlength="3" maxlength="4">
+            <label for="cvv">CVV / CVC</label>
+        </fieldset>
+        
+        <input type="submit">
+    </form>
+</body>
+
+</html>
